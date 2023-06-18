@@ -6,7 +6,7 @@ module.exports = {
     moderatorOnly: true,
     data: new SlashCommandBuilder()
         .setName("mute")
-        .setDescription("Mute a member from the guild.")
+        .setDescription("Mute a member from a guild.")
         .setDMPermission(false)
         .addUserOption(option =>
             option.setName("target")
@@ -20,7 +20,7 @@ module.exports = {
         )
         .addStringOption(option =>
             option.setName("reason")
-                .setDescription("What is the reason of the mute?")
+                .setDescription("What is the reason for muting the user?")
         ),
 
     async execute(interaction) {
@@ -33,7 +33,7 @@ module.exports = {
         const reason = options.getString("reason") || "No reason provided";
 
         const errEmbed = new EmbedBuilder()
-            .setDescription('Something went wrong. Please try again later.')
+            .setDescription('Something went wrong. Please try again later. Im tryna cosplay some error 404 thing lmao')
             .setColor(0xc72c3b)
 
         const succesEmbed = new EmbedBuilder()

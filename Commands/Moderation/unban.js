@@ -5,11 +5,11 @@ module.exports = {
   moderatorOnly: true,
   data: new SlashCommandBuilder()
     .setName("unban")
-    .setDescription("Unban a user from the discord server.")
+    .setDescription("Unban a member from the discord server.")
     .setDMPermission(false)
     .addStringOption(option =>
       option.setName("userid")
-        .setDescription("Discord ID of the user you want to unban.")
+        .setDescription("UserID [obv of the banned member] you want to unban.")
         .setRequired(true)
     ),
 
@@ -22,7 +22,7 @@ module.exports = {
       await interaction.guild.members.unban(userId);
 
       const embed = new EmbedBuilder()
-        .setDescription(`Succesfully unbanned id ${userId} from the guild.`)
+        .setDescription(`Unbanned ${userId} from the guild.`)
         .setColor(0x5fb041)
         .setTimestamp();
 
@@ -33,7 +33,7 @@ module.exports = {
       console.log(err);
 
       const errEmbed = new EmbedBuilder()
-        .setDescription(`Please provide a valid member's ID.`)
+        .setDescription(`Please provide a valid userID.`)
         .setColor(0xc72c3b);
 
       interaction.reply({ embeds: [errEmbed], ephemeral: true });

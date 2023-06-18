@@ -9,7 +9,7 @@ const client = new Client({
 	],
 });
 
-client.on('ready', () => {
+client.once('ready', () => {
 	console.log('W rizz, no code error')
 });
 

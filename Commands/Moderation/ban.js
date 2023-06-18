@@ -9,7 +9,7 @@ module.exports = {
         .setDMPermission(false)
         .addUserOption(option =>
             option.setName("target")
-                .setDescription("User to be banned.")
+                .setDescription("User that is to be banned.")
                 .setRequired(true)
         )
         .addStringOption(option =>

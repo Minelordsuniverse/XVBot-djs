@@ -14,13 +14,10 @@ client.once('ready', () => {
 });
 
 client.commands = new Collection();
+client.subCommands = new Collection(); //sub commands
 
 const { SlashCommandBuilder } = require('discord.js');
 
-const client = new Client({
-  intents: [Object.keys(GatewayIntentBits)],
-  partials: [Object.keys(Partials)],
-});
 // adding no prefix sytem type help in a discord server 
 const client = new Client({
   intents: [Object.keys(GatewayIntentBits)],
@@ -70,9 +67,6 @@ process.on("unhandledRejection", e => {
   process.on("uncaughtExceptionMonitor", e => {
 	console.log(e)
   })
-
-client.commands = new Collection();
-client.subCommands = new Collection(); //sub commands
 
 module.exports = client;
 

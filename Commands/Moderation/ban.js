@@ -26,7 +26,7 @@ module.exports = {
         const member = await interaction.guild.members.fetch(user.id);
 
         const errEmbed = new EmbedBuilder()
-            .setDescription(`You can't take action on ${user.username} since they have a higher role.`)
+            .setDescription(`You can't perform said action on ${user.username} since they have a higher role hierarchy.`)
             .setColor(0xc72c3b);
 
         if (member.roles.highest.position >= interaction.member.roles.highest.position)
@@ -35,7 +35,7 @@ module.exports = {
         await member.ban({ reason });
 
         const embed = new EmbedBuilder()
-            .setDescription(`Succesfully banned ${user} with reason: ${reason}`)
+            .setDescription(`Succesfully banned ${user} lol, reason being: ${reason}`)
             .setColor(0x5fb041)
             .setTimestamp()
 

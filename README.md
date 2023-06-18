@@ -1,6 +1,6 @@
 # XVBot-djs
 ## [Hopefully] A **multi-purpose discord bot** [made using discordjs], __heavy W.I.P__ as of now.  
-### As it is still heavily a W.I.P, I have not included the invite link. Hosting your own instance as of now using the base code may or may not work without some debugging/modifying. 
+### As it is still heavily a W.I.P, I have not included the invite link. Hosting your own instance as of now using the base code may or may not work without some debugging/modifying. (Also, Ideally use a formatter and/or a linter just to help make the code cleaner & easier to manage.)
 
 ---  
 

@@ -12,7 +12,7 @@
 - Music commands [hopefully in working state]
 - Misc/fun commands.  
 
---  
+---  
 
 ### Hosting your own instance:
 1. Clone the repository    [`git clone https://github.com/Minelordsuniverse/XVBot-djs.git either in terminal or git bash.`]  

@@ -19,11 +19,11 @@ module.exports = {
     const member = guild.members.cache.get(user.id);
 
     const errEmbed = new EmbedBuilder()
-      .setDescription('Something went wrong. Please try again later.')
+      .setDescription('Something went wrong. Please try again later. Tryna pull the error 404 person xx')
       .setColor(0xc72c3b)
 
     const succesEmbed = new EmbedBuilder()
-      .setTitle("**:white_check_mark: Unmuted**")
+      .setTitle("**Unmuted**")
       .setDescription(`Succesfully unmuted ${user}.`)
       .setColor(0x5fb041)
       .setTimestamp();

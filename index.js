@@ -59,3 +59,5 @@ client.config = require("./config.json");
 logs(client, {
   debug: true,
 });
+
+client.login(token);

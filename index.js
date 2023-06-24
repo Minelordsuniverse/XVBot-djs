@@ -9,8 +9,8 @@ const client = new Client({
 	],
 });
 
-client.once('ready', () => {
-	console.log('W rizz, no code error')
+client.once(Events.ClientReady, c => {
+	console.log(`W rizz, running as ${c.user.tag}`);
 });
 
 client.commands = new Collection();

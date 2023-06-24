@@ -27,10 +27,10 @@ const client = new Client({
 // visible response **[TEST FUNCTION]**
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('help')
-		.setDescription('Commands list'),
+		.setName('invite')
+		.setDescription('To invite the bot to a server you can add it in.'),
 	async execute(interaction) {
-		await interaction.reply('[slash] commands you can do: `ping` , `im depressed`');
+		await interaction.reply('Invitation link: https://discord.com/api/oauth2/authorize?client_id=1052198468246052864&permissions=8&scope=bot'); //insert your bot OAuth2 in here.
 	},
 };
 
@@ -40,21 +40,6 @@ client.on('messageCreate', async (message) => {
   if (message.content === 'help') { // triggers command when message is sent ig [TEST]
     await message.reply('Hey! For help just type ***/help*** !'); // response
   }
-});
-
-// hidden response **[TEST FUNCTION]**
-client.on(Events.InteractionCreate, async interaction => {
-	if (!interaction.isChatInputCommand()) return;
-
-	if (interaction.commandName === 'ping') {
-		await interaction.reply({ content: 'Secret Pong!', ephemeral: true });
-		if (!interaction.isChatInputCommand()) return;
-
-	if (interaction.commandName === 'im depressed') {
-		await interaction.reply('aww dont be! There are many reasons to be alive.');
-		await interaction.followUp({ content: 'you should kill yourself immediately.', ephemeral: true });
-	}
-	}
 });
 
 //nodejs-events
